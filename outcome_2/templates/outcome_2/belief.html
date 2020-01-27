@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Belief
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red"><strong>Ufikiria kuhusu hadithi uliyosikia, zingatia sentensi zifuatazo kisha uamue ni gani inayo lingana na imani yako kuhusu  ni kwa nini vurugu za nyumbani zilitokea kwa mtu huyu.</strong></p>
+
+<p>Thinking about the story you just heard, consider the following statements and rate how much each of them matches your belief about why the domestic violence happened to this person in particular. </p>
+
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+<p><strong>Press "Next."</strong></p>
+    {% next_button %}
+{% endblock %}

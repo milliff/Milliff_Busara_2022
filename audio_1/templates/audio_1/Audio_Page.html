@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Audio 1
+{% endblock %}
+
+{% block content %}
+
+<p style="color:blue"><strong>LISTEN TO THE ENTIRE STORY. THEN PRESS NEXT.</strong></p>
+
+<audio preload="auto" controls="controls" autoplay="autoplay">
+<source src="{% static "audio_1/dv_swa.mp3" %}" type="audio/mpeg"/>
+</audio>
+
+
+    {% next_button %}
+{% endblock %}

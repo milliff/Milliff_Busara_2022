@@ -1,0 +1,65 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Pre-Survey 2
+{% endblock %}
+
+{% block content %}
+
+{% if exp_ct == 0 %}
+
+<p style="color:red">
+    Ukifikiria kuhusu tukio za hivi karibuni , hebu zingatia kila mmoja ya sentensi hizi na kisha uamue ni kwanini uanaamini zilikufanyikia wewe:
+</p>
+
+<p>
+    Thinking about the most recent instance of violence you can remember
+    from your community, consider of the following statements and rate how
+    much each of them matches your belief about why that incident happened
+    to that person in particular.
+</p>
+
+{% elif vic_self == "self" %}
+
+<p style="color:red">
+    Ukifikiria kuhusu tukio za hivi karibuni,
+    hebu zingatia kila mmoja ya sentensi hizi na kisha uamue ni kwanini uanaamini zilikufanyikia wewe:
+</p>
+
+<p>
+    Thinking about the most recent of those incidents,
+    consider the following statements and rate how much each of
+    them matches your belief about why that incident happened
+    to you in particular.
+</p>
+
+{% else %}
+
+<p style="color:red">
+    Ukifikiria kuhusu tukio za hivi karibuni , hebu zingatia kila mmoja ya sentensi hizi na kisha uamue ni kwanini uanaamini zilikufanyikia wewe:
+</p>
+
+<p>
+    Thinking about the most recent of those incidents,
+    consider the following statements and rate how much each of
+    them matches your belief about why that incident happened
+    to that person in particular.
+</p>
+
+
+{% endif %}
+
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+    {% next_button %}
+{% endblock %}

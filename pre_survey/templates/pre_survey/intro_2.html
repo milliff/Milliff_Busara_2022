@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Karibu!
+{% endblock %}
+
+{% block styles %}
+    <style>
+        ::-moz-selection { /* for Firefox */
+          background: #87ceebb3;
+        }
+
+        ::selection {
+          background: #87ceebb3;
+        }
+
+        mark {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red">Baadhi ya ujumbe na vitu utakavyo ona na kusikia katika sehemu hii vitahusu vurugu,
+    haswa aina ya vurugu ambazo wakati mwingine hufanyika katika jamii yako.
+    Uamuzi ni wako ikiwa utataka kuona ujumbe huu au kusikiza  au pia ikiwa hungetaka.
+    Ikiwa utajisikia hauko huru wakati wowote, unaweza kumkaribia mmoja wa wasaidizi wetu aliye katika chumba hiki na wewe.</p>
+
+<p>Some of the material you see and hear in this section is about violence, especially kinds of violence that sometimes happen in your community.
+    It is up to you whether you want to see this material or not.
+    If you are feeling uncomfortable at any point, you can approach one of the lab officers in the room with you.</p>
+
+    <p><strong>Press "Next."</strong></p>
+
+    {% next_button %}
+{% endblock %}
+
+

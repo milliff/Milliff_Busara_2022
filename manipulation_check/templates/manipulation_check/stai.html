@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    STAI
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red"><strong>Unahisi kivipi sasa hivi?Soma kila sentensi hapa chini na uchague jibu ambayo unahisi ii sahihi zaidi na inayo ashiria jinsi unavyohisi kwa sasa.Hakuna jibu sahihi au isiyo sahihi.Usitumie muda mwingi kwa sentensi moja lakini toa jibu ambalo ni bora kwako na ianyo ashiria hisia zako kwa sasa.</strong></p>
+
+<p>How are you feeling right? Read each statement below and select the most appropriate answer to indicate how you feel at the moment.There are no wrong or right answers.Do not spend to much time on any one statement but give the answer that best describes your present feelings best.</p>
+
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+<p><strong>Press "Next."</strong></p>
+    {% next_button %}
+{% endblock %}

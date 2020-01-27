@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Make a Choice
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red"><strong>Mtu huyo anafaa kufanya nini?</strong></p>
+
+<p>WWhat should the person do? </p>
+
+{% formfields %}
+
+<p><strong>The Page will Automatically Advance after 10 Seconds."</strong></p>
+
+    {% next_button %}
+{% endblock %}

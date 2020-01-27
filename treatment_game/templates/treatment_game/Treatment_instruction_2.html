@@ -1,0 +1,45 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block styles %}
+    <style>
+        ::-moz-selection { /* for Firefox */
+          background: #87ceebb3;
+        }
+
+        ::selection {
+          background: #87ceebb3;
+        }
+
+        mark {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+
+<p style="color:red"><strong>Mchezo utachukua sekunde 90, au mpaka utakapo poteza alama zako zote " za afya”. Unaweza kuona idadi ya alama za afya zilizobaki upande wa kulia wa skrini. Unaweza pia kuona malipo yako iliyoandikwa kwa shilingi.
+</strong></p>
+
+<p>The game lasts for 90 seconds, or until you lose all of your “health points.” You can see the number of health points remaining on the right side of the screen. You can also see your payout in shillings.
+</p>
+
+
+<p style="color:red"><strong>Hapo mwanzoni, una shilingi 50. Ikiwa utapoteza maisha yote kumi, utakuwa umebakisha shilingi 0.</strong></p>
+
+<p>At the start of the game, you have 50 Ksh. If you lose all ten lives, you will have zero Ksh. remaining.
+</p>
+    <p><strong>If you are ready to start the game, press "Next."</strong></p>
+
+    {% next_button %}
+{% endblock %}
+
+

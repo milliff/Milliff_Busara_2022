@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block styles %}
+    <style>
+        ::-moz-selection { /* for Firefox */
+          background: #87ceebb3;
+        }
+
+        ::selection {
+          background: #87ceebb3;
+        }
+
+        mark {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red">
+    Hapo chini utaona udhibiti wa mchezo huu.Unawakilishwa na laini unayoiona hapa chini ya skrini yako.Punde tu utakapo bonyeza "Start the Task",
+    muda utaanza kuji hesabu na vitu hatari vitaanza kuanguka bila mpangilio wowote kutoka juu ya skrini.
+    Unaweza kubonyeza mishale iliyo hapo chini ya skrini ili kujirudisha mbele na nyuma.Ili uepuka kitu cha hatari kukuguza,
+    ni lazima uhakikishe hauko chini ya kitu hicho hatari wakati kitakapogusa chini ya skrini.Kumbuka, unapoteza pointi  kila wakati kitu hatari kinakuguza.
+</p>
+
+<p>Below you see the controls for the game.
+    You are represented by the ﬂat object you see in the bottom of the screen.
+    Once you click the “Start the Task” button, a countdown timer will start and dangerous items will start to fall randomly from the top of the screen.
+    You can press the arrows below the screen to move yourself back and forth.
+    To avoid a dangerous item, your must not be below the dangerous item when it touches the bottom of the screen.
+    Remember, you lose points every time a dangerous object hits you.
+</p>
+
+    <div id="inst_img">
+        <img src="{% static "ball_catch/images/instruction.png" %}" width="600"/>
+    </div>
+
+    <p><strong>If you are ready to play, please click the "Next" button. .</strong></p>
+
+    {% next_button %}
+{% endblock %}
+
+

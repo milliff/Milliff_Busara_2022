@@ -1,0 +1,50 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block styles %}
+    <style>
+        ::-moz-selection { /* for Firefox */
+          background: #87ceebb3;
+        }
+
+        ::selection {
+          background: #87ceebb3;
+        }
+
+        mark {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red">
+    Sasa utacheza mchezo kwenye machine yako ambayo itakuwa inawakilisha vurugu.
+    Kazi yako itakuwa ni kujilinda kutokana na kuumia.
+    Lengo la  mchezo liitakuwa kutumia mishale kujisongesha kwenye skrini yako ili kuzuia vitu vya hatari kukugonga.
+    Utaanza kwa kuwa na afya kamili, ambayo ni ya thamani ya shilingi 50.
+    Kila wakati unapo gongwa kama hujajizuia, inamaanisha utaumia, na utapoteza afya na kiasi cha pesa ulicho pewa. Mwisho wa sekunde 90,
+    mchezo huu utakamilika na utalipwa pesa inayo lingana na afya uliyobakisha. Ukipoteza afya yako yote kabla ya sekunde 90 kufika,
+    inamaanisha umeaga na utatolewa. Mchezo utaisha mapema na utapoteza shilingi zako 50 ulizoanza nazo.
+</p>
+
+<p>Now you are going to play a game on the tablet which is meant to represent violence.
+    Your job is to to protect yourself from getting hurt.
+    The object of the game is to use  arrows to move yourself around the screen in order to prevent dangerous items from hitting you.
+    You start at full health, which is worth 50 Ksh. Every time an item hits you before you can escape it, you are injured,
+    and you lose some health and some amount of Ksh. At the end of 90 seconds, the game will end and you will be paid the value in Ksh.
+    of all the health you have remaining. If you lose all your health before 90 seconds are up, you die.
+    The game will end early and you will lose all 50 Ksh. you started with.</p>
+
+    <p><strong>If you are ready to read more, please click the "Next" button. .</strong></p>
+
+    {% next_button %}
+{% endblock %}
+
+

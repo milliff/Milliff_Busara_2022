@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block styles %}
+    <style>
+        ::-moz-selection { /* for Firefox */
+          background: #87ceebb3;
+        }
+
+        ::selection {
+          background: #87ceebb3;
+        }
+
+        mark {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red"><strong>Kwenye skrini inayofuata, utacheza mchezo huu tena. Wakati huu, idadi ya vitu hatari ambazo utakosa itaamua malipo yako.</strong></p>
+
+<p>On the next screen, you will play the game again. This time, the number of dangerous items you miss determines your payout.</p>
+
+
+<p style="color:red"><strong>Tafadhali valia  headphones ili uweze kusikia sauti kwenye mchezo huu.</strong></p>
+
+<p>Please put on your headphones so that you can hear the audio in the game.
+</p>
+    <p><strong>If you are ready to read more, please click the "Next" button. .</strong></p>
+
+    {% next_button %}
+{% endblock %}
+
+

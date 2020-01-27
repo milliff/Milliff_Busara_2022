@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Karibu!
+{% endblock %}
+
+{% block styles %}
+    <style>
+        ::-moz-selection { /* for Firefox */
+          background: #87ceebb3;
+        }
+
+        ::selection {
+          background: #87ceebb3;
+        }
+
+        mark {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red">Utafiti huu unahusu jinsi watu hufanya maamuzi katika hali ngumu.
+    Katika sehemu hii, utajibu maswali hujihusu wewe mwenyewe, utacheza mchezo ambao unaweza kupata pesa kulingana na alama ambazo utapata,
+    Kisha utafanya chaguzi kadhaa kuhusu jinsi watu tuliobuni sisi, wanavyo faa kufanya,
+    kitabia, wanapo kumbwa na hali ngumu ambapo wanatishiwa na vurugu.</p>
+
+<p>This study is about how people make decisions in difficult situations.
+    In this section, you will answer questions about yourself, play a game in which you can earn money based on your score, and then make some choices about how hypothetical people should behave
+    in difficult situations where they are threatened with violence.</p>
+
+    <p><strong>Press "Next" .</strong></p>
+
+    {% next_button %}
+{% endblock %}
+
+

@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Pre-survey 1
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red">Kwa kila tukio liliofanyika hivi karibuni, muathirika alikuwa ni nani?</p>
+
+<p> You answered that you or someone you know has been affected by violence. For the most recent of those incidents, who was the victim?  </p>
+
+{% formfields %}
+
+    {% next_button %}
+{% endblock %}

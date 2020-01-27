@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Sense of Control
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red"><strong>Ulihisi una uwezo kiasi gani kudhibiti alama ulizopokea kwenye mchezo uliocheza sasa hivi?</strong></p>
+
+<p>How much control did you feel you had over the over the score you received in the game you just played?</p>
+
+{% formfields %}
+
+<p><strong>Press "Next."</strong></p>
+
+    {% next_button %}
+{% endblock %}

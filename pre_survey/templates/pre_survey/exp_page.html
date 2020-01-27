@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Pre-Survey 1
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red">Je! Wewe au mtu wa familia yako, au mtu mwingine unayemjua, amewahi kuwa mwathirika wa aina zifuatazo za vurugu, tafadhali guza zote zinazo faa kwako.</p>
+
+<p>Have you or a member of your family, or someone else you know personally ever been the victim of one of the following types of violence?</p>
+
+    {% formfields %}
+
+    {% next_button %}
+{% endblock %}

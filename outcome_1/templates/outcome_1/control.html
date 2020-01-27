@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Sense of Control
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red"><strong>Unahisi mwanamke alikuwa na udhibiti gani katika hali hii?</strong></p>
+
+<p>How much control do you feel the woman had in this situation? </p>
+
+{% formfields %}
+
+<p><strong>Press "Next."</strong></p>
+
+    {% next_button %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Make a Choice 2
+{% endblock %}
+
+{% block content %}
+
+<p style="color:red"><strong>Unafikiri watu wengine wangechagua mtu huyu kufanya nini?</strong></p>
+
+<p>What do you think other people would choose for the person to do? </p>
+
+{% formfields %}
+
+<p><strong>Press "Next."</strong></p>
+
+    {% next_button %}
+{% endblock %}

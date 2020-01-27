@@ -1,0 +1,99 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<!--    Game 1: Round  of 5-->
+    Practice Round
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "ball_catch/css/style_jung.css" %}" />
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static "ball_catch/js/jquery-1.11.0.min.js" %}"></script>
+    <script src="{% static "ball_catch/js/jquery-ui.min.js" %}"></script>
+    <script src="{% static "ball_catch/js/ball-catch.js" %}"></script>
+    <script>
+        var score = 50;
+        var interval = 200;
+        var ballDelay = 2500;
+        var prize = -5;
+        var time = 31;
+    </script>
+
+{% endblock %}
+
+
+{% block content %}
+
+<p style="color:red">
+    Roundi hii ya kwanza ni zoezi. Itachukua sekunde 30 na haitaadhiri malipo yako.
+    Roundi inayofuata itachukua sekunde 90, au hadi utakapokuwa umepoteza alama zako zote za afya, yoyote itakayo fanyika mwanzo.
+</p>
+
+<p>This ﬁrst round is a practice.
+    It lasts 30 seconds and does not count toward your payment.
+    The next round will last 90 seconds, or until you run out of health points, whichever comes ﬁrst.</p>
+
+    <div id="wrapper">
+        <div id="jballfall">
+            <div class="statstext" id="gamestats">
+                <div id="gamestatsleft">
+                    <div>
+                        Hits: <span id="catchesstats" class="statsnumber">0</span>
+                    </div>
+
+                    <div>
+<!--                        Score: <span id="scorestats" class="statsnumber">0</span>-->
+                    </div>
+                </div>
+                <div id="gamestatsright">
+                    <div>
+<!--                        Clicks: <span id="clicksstats" class="statsnumber">0</span>-->
+                    </div>
+                    <div>
+<!--                        Expense: <span id="expensestats" class="statsnumber">0</span>-->
+                    </div>
+                </div>
+            </div>
+            <div id="timer" class="statstext center"> Time Left: <p id="clock">0:30</p></div>
+            <div id="gamecontainer">
+                <div id="waterfall"></div>
+                <div id="gameinfo" class="infogame">
+                    <div>
+                      <span></span>
+                    </div>
+                    <div>
+                       <span id="cost" class="statsnumber"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="clickleft">
+                <div>
+                    <button type="button" id="left" class="button" style="width:120px">LEFT</button>
+                </div>
+            </div>
+            <div id="clickright">
+                <div>
+                    <button type="button" id="right" class="button" style="width:120px">RIGHT</button>
+                </div>
+            </div>
+            <div id="periodcontroller">
+                <div>
+                    <button type="button" id="startbutton" class="button" style="width:150px">Start the Task!</button>
+                </div>
+            </div>
+        </div>
+        <br class="break" />
+        <div id="container" align=center>
+            <input type="hidden" name="catches" id="catches" value="0" />
+            <input type="hidden" name="clicks" id="clicks" value="0" />
+            <input type="hidden" name="score" id="score" value="0" />
+            <input type="hidden" name="expense" id="expense" value="0" />
+        </div>
+    </div>
+
+    {% next_button %}
+
+{% endblock %}
