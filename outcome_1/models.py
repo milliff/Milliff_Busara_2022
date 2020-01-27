@@ -87,5 +87,6 @@ class Player(BasePlayer):
                                                                             ["Moderately describes my belief", "Inaeleza maoni yangu kiasi"],
                                                                             ["Mostly describes my belief", "Inaelezea maoni yangu kwa kiwango kubwa"],
                                                                             ["Completely describes my belief", "Inaelezea maoni yangu kabisa"]])
+    timeout = models.BooleanField()
 
 

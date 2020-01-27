@@ -10,10 +10,18 @@ class Instructions(Page):
 class ego(Page):
     form_model = "player"
     form_fields = ["outcome2_ego"]
+    timeout_seconds = 11
+    def before_next_page(self):
+        if self.timeout_happened:
+            self.player.timeout = True
 
 class alter(Page):
     form_model = "player"
     form_fields = ["outcome2_alter"]
+    timeout_seconds = 11
+    def before_next_page(self):
+        if self.timeout_happened:
+            self.player.timeout = True
 
 class control(Page):
     form_model = "player"
