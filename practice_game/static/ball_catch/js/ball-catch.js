@@ -74,9 +74,9 @@ function createballs() {
         if (time == 0){
             clearInterval(control);
         }
-        else if (score == 0){
+        else if (score < 1){
             clearInterval(control);
-//            alert("Game Over. Click Next to See your Score.");
+            alert("Game Over. Click Next to See your Score.");
         }
         createball();
     }, ballDelay);
@@ -107,9 +107,9 @@ function ballFall(id) {
      * */
     var caught = setInterval(function(){
         if (parseInt(ball.css("margin-top")) < parseInt($(".tray").css("margin-top"))
-            && parseInt(ball.css("margin-top")) > parseInt($(".tray").css("margin-top")) - 40
+            && parseInt(ball.css("margin-top")) == parseInt($(".tray").css("margin-top")) - 40
             && parseInt(ball.css("margin-left")) == parseInt($(".tray").css("margin-left")) + 13
-            && score >= 0){ // still can't get the break conditions figured out yet.
+            && score >= 1){ // still can't get the break conditions figured out yet.
             score -= prize;
             catches += 1;
             lives -= 1;

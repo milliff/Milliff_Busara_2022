@@ -14,7 +14,9 @@ SESSION_CONFIGS = [
     dict(
         name='test',
         num_demo_participants=1,
-        app_sequence= ['pre_survey', 'practice_game',
+        app_sequence= [
+                       'pre_survey', 'practice_game',
+                       'ambiguity_game',
                        'treatment_game', 'manipulation_check',
                        'audio_1', 'outcome_1', 'audio_2',
                        'outcome_2', 'debrief']

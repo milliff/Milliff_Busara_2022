@@ -13,7 +13,7 @@ p { margin:10px 0; }
 #wrapper { width:800px; margin:0 auto; }
 
 /* JBALLFALL */
-#jballfall { margin:20px 0; }
+#jballfall { margin:px 20; }
 #timer {width:200px; height:100px; margin-left:50px; float:left; position:relative; }
 #gamestats { width:450px; height:100px; margin-left:50px; float:left; }
 #gamestatsleft { width:200px; height:100px; margin-left:50px; float:left; position:relative; }
@@ -26,7 +26,7 @@ p { margin:10px 0; }
 #periodcontroller { width:250px; height:50px; margin-left:150px; float:left; position:relative; }
 
 
-.fallingball { background-image:url("../images/ball.png"); width:50px; height:50px; background-repeat:no-repeat; }
+.fallingball { background-image:url("../images/ball.png"); width:20px; height:20px; background-repeat:no-repeat; }
 .tray { background-image:url("../images/tray.png"); width: 76px; height:10px; background-repeat:no-repeat; }
 
 .button { font-size:30px; }
@@ -35,4 +35,4 @@ p { margin:10px 0; }
 .infogame { font-size:20px; }
 .center {text-align:center; }
 
-#info { margin-top:40px; }
+#info { margin-top:5px; }

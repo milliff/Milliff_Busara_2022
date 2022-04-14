@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+Game over!
+
+<p>You were hit {{ player.catches }} times.</p>
+
+<p style="color:red"><strong>You lost {{player.catches}}/10 health points.</strong></p>
+
+<p>Each hit cost you 5 Ksh.</p>
+
+<p style="color:red"><strong> Your payout is Ksh. {{player.payoff}}. </strong></p>
+
+    {% next_button %}
+{% endblock %}
+
+
